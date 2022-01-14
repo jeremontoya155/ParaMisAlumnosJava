@@ -1,0 +1,700 @@
+//Comentario
+
+/*Comentario de varias lineas*/
+
+/** Si luego de esto apretamos un enter nos da un comentario a varias variables 
+
+
+------------------------------------
+Importante si no sale directo escribir siempre 
+
+ public static void main(String[] args){
+        Codigo
+    
+    } 
+
+Porque sino no podremos ingresar en pantalla 
+
+------------------------------------
+Variables segun los tipos de datos y su definicion 
+Recordar que es case sensitive 
+No se puede iniciar con numeros
+Todas las sentencias terminan en punto y coma 
+
+Integer nombreVariable=numero;
+Float nombreVariable=numero;
+String nombreVariable="Texto";
+Boolean nombreVariable=true;
+Double nombreVariable=numero;
+
+Tambien tenemos 
+
+byte 
+short 
+char
+Array
+long 
+
+podemos definir tambien el tipo 
+
+como
+
+int uno,dos,tres; 
+
+Y luego dar un valor a las variables;
+
+------------------------------------
+Salida en pantalla 
+
+System.out.println("Dato a mostrar");
+
+CONCATENACION 
+
+System.out.println("Dato a mostrar"+variableAMostrar);
+
+-----------------------
+
+CONVERSION DE LOS TIPOS DE DATOS 
+
+CASOS DE VALUE OF Y PARSE
+
+Tipo nombreVariable=Tipo.parse.Tipo(Valor);
+
+String nombreVar=Boolean.toString(nombreVarAnterior);
+
+Ejemplos 
+
+
+public class Main {
+        public static void main(String[] args){
+            String uno="21";
+            Integer dos=Integer.parseInt(uno);
+            Float tres=Float.parseFloat(uno);
+            Double cuatro=Double.parseDouble(uno);
+            
+        } 
+    
+}
+
+
+---------------------------
+Operadores
+
+- 
++
+*
+/
+%
+
+Orden 
+
+Parentesis
+Resta
+Suma
+Multiplicacion
+Division
+Resto
+
+
+Operadores relacionales
+
+&&  and
+|| or
+! not
+== Igual
+!= distinto
+>= mayor igual
+<= menor igual 
+++ despues de un valor numerico es incremento
+-- igual a caso omiso pero decremento 
+
+
+
+-------------------------
+
+Condicionales
+
+Explicar el flujo con paint o grafico 
+
+if(condicion){
+	accion
+}
+else if (condicion){
+	accion	
+}
+else{
+	Caso de que no cumpla ninguna condicion 
+}
+
+Ejemplo 
+
+public class Main {
+    
+    public static void main(String[] args ){
+    Integer edad= 7;
+    if(edad>1){
+          if(edad>=18){
+         System.out.println("Es mayor de edad");
+         }
+        else{
+        System.out.println("Es menor de edad");
+        }
+          
+    }
+    else{
+    System.out.println("Es un infante");
+    }
+  
+   
+    }
+    
+}
+
+Ejemplo
+
+     private static void aleatorio(Double num){
+         Double comp= Math.random()*7;
+         
+         if (num==comp) {
+             
+             System.out.println("El numero es  igual");
+             
+         } else {
+             System.out.println("El numero es diferente");
+             System.out.println(comp);
+         }
+                
+     }
+
+--------------
+
+Operadores extras
+
+switch 
+
+en un caso simple el switch nos deja ver varias opciones a partir del case y deja una 
+opcion default en caso de no cumplir ninguna 
+
+switch(dato){
+	case opcion:codigo;break; Esto se repite para cada opcion
+	default:codigo en caso de no entrar en ninguna opcion;break;	
+}	
+
+el break nos permite el corte en caso de llegar hasta esa instancia 
+
+ejemplo 
+
+  switch(primera){
+         
+             case 5:System.out.println("Es un 5");break;
+             case 6:System.out.println("Es un 6");break;
+             case 7:System.out.println("Es un 7");break;
+             case 8:System.out.println("Es un 8");break;
+             case 9:System.out.println("Es un 9");break;
+             case 10:System.out.println("Es un 10");break;
+             default:System.out.println("No es ninguno ");break;
+             
+             
+         }
+
+
+
+--------------------------------
+
+Caso de errores 
+
+Ejemplo de estructura donde recuperamos un error 
+
+ try{
+             int uno=4/0;
+         }catch(Exception e){
+         System.out.println(e);}
+
+----------------------------
+
+Estructuras de control 
+
+while bucle que se repite de manera infinita hasta que se rompa la condicion 
+
+while(condicion){
+	
+	Codigo
+
+}
+
+
+Ejemplo
+
+  Integer contador=0;
+    
+    while(contador<3){
+        contador++;
+        System.out.println(contador);
+        
+    }
+
+
+
+do while ejecuta por lo menos una vez la porciond de codigo y luego entrea en el ciclo
+
+
+do{
+	Codigo a ejecutar 
+}while(condicion)
+
+
+Ejemplo 
+
+Integer primera=0;
+         
+         do{
+             System.out.println("Primera:"+primera);
+             primera++;
+         }while(primera<10);
+         
+
+Ciclo for
+
+Se ve mas util cuando ya sabemos el numero de repeticiones que necesitaremos 
+
+Ejemplo del for 
+
+    for(Integer i=0;i<10;i++){
+        System.out.println("Sale el numero:"+i);
+        
+    }
+
+forma de recorrer un array con el for 
+
+for(tipoDeDato nombreAAsignar:nombreArray){
+	accion con el elemento
+}
+
+Ejemplo
+
+
+         String[] semana={"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"};
+         for (String dia:semana){
+             System.out.println(dia);
+         }
+
+
+---------------
+
+Los array
+
+Listas de elementos con una cantidad determinada o no 
+Arreglos/matrices unidimensionales 
+ejemplos
+
+
+import java.util.Hashtable;
+/**
+ *
+ * @author Administrador
+ */
+public class Main {
+        public static void main(String[] args){
+            
+         String[] otra=new String[7]; 
+         otra[0]="Lunes";
+         otra[1]="Martes";
+         otra[2]="Miercoles";
+         otra[3]="Jueves";
+         otra[4]="Viernes";
+         otra[5]="Sabado";
+         otra[6]="Domingo";
+         
+         
+         
+         Integer primera=0;
+         String[] semana={"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"};
+         
+         
+         Hashtable<Integer,String> sem = new Hashtable<Integer,String>();
+         sem.put(0,"Domingo");
+         sem.put(1,"Lunes");
+         sem.put(2,"Martes");
+         sem.put(3,"Miercoes");
+         sem.put(4,"Jueves");
+         sem.put(5,"Viernes");
+         sem.put(6,"Sabado");
+         
+         System.out.println(sem);
+         System.out.println("------------------");
+         System.out.println(sem.get(1));
+         System.out.println("------------------");
+         
+         for (String dia:semana){
+             System.out.println(dia);
+         }
+         System.out.println("------------------");
+         
+         for (String dia:otra){
+             System.out.println(dia);
+         }
+          
+          
+          
+         
+        } 
+    
+}
+
+
+------------------------
+
+ArrayList
+
+
+Realizamos primero el importe de la clase correspondiente 
+
+import java.util.Hashtable;
+/**
+ *
+ * @author Administrador
+ */
+public class Main {
+        public static void main(String[] args){
+            
+        ArrayList<String> uno=new ArrayList<String>();
+        
+        uno.add("1");
+        uno.add("2");
+        uno.add("3");
+        uno.add("4");
+        uno.add("5");
+        uno.add("6");
+        uno.add("7");
+        //Indicado el indice de la ubicacion que querramos podesmos dejar el objeto
+        uno.add(7,"Extra");
+        //Se ve como se hace el agregado en la ubicacion corriendo todo 
+        uno.add(5,"Cambio");
+                
+        
+        System.out.println(uno);
+          
+          
+          
+         
+        } 
+    
+}
+
+Lista con ya datos enviados
+
+ List<Integer> list=Arrays.asList(1,2,3);
+
+ List numeros=new ArrayList();
+     Double a=Math.random()*10;
+     Double b=Math.random()*10;
+     Double c=Math.random()*10;
+     Double d=Math.random()*10;
+     numeros.add(a);
+     numeros.add(b);
+     numeros.add(c);
+     numeros.add(d);
+     System.out.println(numeros);
+     
+      Collections.sort(numeros, Collections.reverseOrder());
+      System.out.println(numeros);
+     
+
+metodos
+ .get() retoma un elemetno con un indice
+ .size() cantidad de elementos de la lista  
+ .contains(elemento) buscamos un elememto en especifoico retorna un bool
+ .indexoOf(elemento) nos devuelve la posicion del elemento a buscar
+ .lastIndexoOf(elemento) nos devuelve la posicion del elemento a buscar contando  a la inversa
+ .remove(posicion) elimina un elemento en la posicion determinada se acomodan el resto		
+ .clear() Elimina toda la lista 	 
+ .isEmpty() da true si la lista esta vacia 
+ .clone() copia una lista	
+	
+	
+Ejemplo para agregar con el caso anterior 
+
+  System.out.println(uno);
+        System.out.println("----------------------------");
+        System.out.println(uno.get(1));
+        System.out.println("----------------------------");
+        System.out.println(uno.size());
+        System.out.println("----------------------------");
+        System.out.println(uno.contains("Extra"));  
+	System.out.println("----------------------------");
+     	System.out.println(uno.indexOf("Extra"));
+        System.out.println("----------------------------");
+        System.out.println(uno.lastIndexOf("Cambio"));
+        System.out.println("----------------------------");
+        uno.remove(2);
+        System.out.println(uno);  
+	System.out.println("----------------------------");
+        System.out.println(uno.isEmpty());  
+	System.out.println("----------------------------");
+        ArrayList dos=(ArrayList) uno.clone();
+        System.out.println(dos); 
+
+
+
+
+----------------------------
+
+Clases de la clase 
+
+Nombre{
+	Propiedades:
+		-Prop1
+		-Prop2
+		-Prop3
+		-Prop4		
+	Metodos(funciones)
+		-Accion1
+		-Accion2
+		-Accion3
+		-Accion4
+	
+		
+	}
+
+
+
+Generamos una nueva clase extra al paquete que usamos del main principal 
+
+**************
+Privacidad
+
+public
+en la class creada significa que  desde cualquier otra clase podemos
+tener acceso a los metodos de la misma 
+En el caso de no querer eso usamos el 
+
+protected 
+Esta forma no deja acceder desde otra clase sino solo desde la clase u subclases
+no deja abrir en otros paquetes 
+
+private
+Solo permite abrir desde la misma clase en la que estamos 
+**************
+
+Retornos
+Van luego de  la aclaracion de privacidad 
+
+void
+No da ningun return 
+
+
+Para dar un return 
+debemos aclarar el tipo de dato y general el return al  final 
+
+
+
+
+public class PrimeraClase {
+    public PrimeraClase(int a,String b,boolean c){
+    
+        String id=String.valueOf(a);
+        String descripcion=b;
+        Boolean estado=c;
+    }
+
+
+
+        PrimeraClase uno = new PrimeraClase(10,"Solo lectura",true);
+
+
+
+-----------------------
+
+Lectura del teclado 
+
+
+Ejemplo uno 
+
+import java.util.Scanner;
+/**
+ *
+ * @author Administrador
+ */
+public class Main {
+        public static void main(String[] args){
+                
+
+            System.out.println("Pon un nombre");
+            Scanner lectura= new Scanner(System.in);
+            String nombre=lectura.next();
+            System.out.println("El nombre ingresado es:"+nombre);
+        
+         
+        } 
+    
+}
+
+
+
+
+
+
+Otro ejemplo de input 
+
+Ejemplo de un input
+
+public class Main {
+    
+    public static void main(String[] args ) throws IOException{
+     InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+     BufferedReader reader = new BufferedReader(inputStreamReader);
+     System.out.println("Type name:");
+     String name = reader.readLine();
+     System.out.println("Hello "+name);
+
+   
+    }
+    
+}
+
+
+Ejemplo con la conversiond de temperaturas
+
+  InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+     BufferedReader reader = new BufferedReader(inputStreamReader);
+     System.out.println("Ingrese una temperatura en C:");
+     String numeroStr = reader.readLine();
+     Double numero=Double.parseDouble(numeroStr);
+     Double temp= (numero*1.8)+32;
+     System.out.println("La temperatura en F es de:"+temp);
+
+
+
+
+
+
+Uso del static 
+
+
+Vemos
+
+
+
+
+el ejemplo de generar una clase auto 
+
+
+public class Auto {
+    
+    private String patente;
+    private String marca;
+    private double precio;
+    private String color;
+    private static double dct;
+    
+    public Auto(String patente,String marca,double precio,String color){
+    
+        this.patente=patente;
+        this.marca=marca;
+        this.precio=precio;
+        this.color=color;
+        Auto.dct=10;
+        
+        
+    
+    }
+    @Override
+    public String toString(){
+    
+        return "Auto{"+ "patente="+patente+",marca="+marca+",precio="+precio+",color="+color+"}";
+    }
+}
+
+
+
+public class Main{
+
+public static void main(String[] args){
+    
+    Auto a1 = new Auto("A12","Fiat",111,"Rojo");
+    Auto a2 = new Auto("B12","Toyota",222,"Azul");
+    Auto a3 = new Auto("C12","Chevrolet",333,"Amarillo");
+    Auto a4 = new Auto("D12","Yamaha",444,"Verde");
+
+    System.out.println(a1);
+    System.out.println(a2);
+    System.out.println(a3);
+    System.out.println(a4);
+}
+
+}
+
+Tenemos el main y la clase auto en la misma podemos darnos cuenta que por ejemplo le agregamos el dct que seria un descuento
+el cual es por defecto del 10% para todos 
+por lo mismo no se hacen aclaracione en ella se puede ver como dejamos sin agregar la misma en las demas 
+
+
+Se usa la clase en lugar del this en el descuento para ver que no podemos dejarlo al mismo 
+
+Ejemplo de metodo de la clase auto usando un descuento
+
+   public double precioPromocional(){
+    return this.precio * Auto.dct/100;} 
+
+Como la usamos en el main 
+
+
+
+    Auto a1 = new Auto("A12","Fiat",111,"Rojo");
+    Auto a2 = new Auto("B12","Toyota",222,"Azul");
+    Auto a3 = new Auto("C12","Chevrolet",333,"Amarillo");
+    Auto a4 = new Auto("D12","Yamaha",444,"Verde");
+
+    System.out.println(a1.precioPromocional());
+    System.out.println(a2.precioPromocional());
+    System.out.println(a3.precioPromocional());
+    System.out.println(a4.precioPromocional());
+
+
+
+
+
+
+Vemos que nos va a tirar el 10% del precio que seria el descuento 
+
+Si queremos ver el precio completo lo vemos como 
+
+
+    public double precioPromocional(){
+    return this.precio-this.precio * Auto.dct/100;} 
+
+
+    Auto a1 = new Auto("A12","Fiat",111,"Rojo");
+    Auto a2 = new Auto("B12","Toyota",222,"Azul");
+    Auto a3 = new Auto("C12","Chevrolet",333,"Amarillo");
+    Auto a4 = new Auto("D12","Yamaha",444,"Verde");
+
+    System.out.println(a1.precioPromocional());
+    System.out.println(a2.precioPromocional());
+    System.out.println(a3.precioPromocional());
+    System.out.println(a4.precioPromocional());
+
+
+
+Esto nos devolveria el precio ya final 
+
+
+Si queremos anular el descuento solo podemos a hacerlo con todos porque es una variable estatica     
+
+
+public void anularDescuento(){
+    Auto.dct=0;}    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+

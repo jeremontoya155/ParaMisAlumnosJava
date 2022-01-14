@@ -1,0 +1,2495 @@
+Que es java JDK
+
+
+Java develpment kit 
+
+JVM(java virtual machine )
+Compilador
+Api
+
+
+Tiene versiones hasta el 13 desde el 6
+
+Open JDK gratiutio
+
+JDK-Oracle gratuito hasta que se lance a produccion 
+
+----------------------------------------------------
+
+Instalamos primero el JDK
+
+https://adoptium.net/
+
+
+Despues intalamos el apache netbeans 
+
+https://netbeans.apache.org/download/nb125/nb125.html
+
+--------------------------------------------------------
+
+
+Java lenguaje de programacion de alto nivel
+
+multiplatarforma 
+
+simple 
+
+seguro 
+
+Multiparadigma(Por mas que es orientada a objetos soporte estructurado)
+
+Puede ser usada para aplicaciones de escritorio 
+
+Codigo fuente 
+
+Compilamos con el javac archivo.java
+
+Se ejecuta gracias a la JVM(java virtual machine)
+
+Java es compilado e interpretado 
+
+Es compilado de codigo fuente a bytecode
+
+
+------------------
+
+Tecnologia de java
+
+Java SE escritorio
+
+Java EE Empresariales
+
+Java ME ejecutar sin sistema operativo 
+
+JavaDB para base de datos 
+
+Oracle es el principal en prestar mantenimiento 
+
+--------------------
+
+
+para ejecutar un programa
+
+WINDOWS
+lo encuentro y es 
+
+javac nombreArchivo.java
+
+java nombreArchivo
+
+Sino
+
+java -jar nombreArchivo.jar
+
+
+
+en linux 
+
+
+Me desplazo con cd y veo los archivos con ls
+
+
+----------------------
+
+Vemos joodle y probamos el primer hola mundo 
+
+--------------------
+
+Primer ejemplo de hola mundo 
+
+public class MyClass {
+    public static void main(String args[]) {
+     
+
+      System.out.println("Hola mundo" );
+    }
+}
+
+Con F6  ejecutamos 
+
+Concatenacion 
+
+Usamos el + como concatenador 
+
+public class MyClass {
+    public static void main(String args[]) {
+     
+      String nombre="Carlos";
+      System.out.println("Hola:"+nombre );
+    }
+}
+
+
+Salida de pantalla vista anteriormente 
+
+System.out.println("Hola mundo");
+
+System.out.print("Hola mundo");"Hace todo en un solo bloque"
+
+System.out.printf("Hola mundo:%s %d",varParaS,varParaD);"Hace todo en un solo bloque" 
+%s para string 
+%d para numericos 
+
+Salto de linea \n
+
+Espacio \t
+
+Borra un caracter a la izquierda\b
+
+------------------------
+
+Comentarios
+
+// Comentario de linea
+
+/*Comentario de bloque */
+
+/** y enter nos sirve para documetnacion de una clase 
+
+
+----------------------
+
+Variables en java
+
+Recordar que para definir variables debemos usar el camelCase
+
+No empezar con mayuscula por buena practica
+No usar palabras reservadas 
+No empezar con numeros 
+
+Numericas enteros
+byte pequeños-128 a 127 1 byte
+
+short -32.768 a 32,767 2 byte
+
+long 9,333974442.... 	8byte
+
+int 			4byte
+
+Con coma
+float 4byte
+
+double 8byte(por defecto)
+
+
+Texto
+char 2byte
+
+
+Boolenaos
+boolean 1bit 
+
+Despues se puede definir las no primitivas como lo son Array y String 
+
+Definir variable 
+
+String nombre; Variable sin asignacion 
+
+nombre="Jorge";
+
+O podemos hacer 	
+
+String nombre="Jorge";
+
+Indicar aca el sout 
+
+Tambien esta la instruccion var
+
+var nombreVariable="String en este caso";
+
+Esta forma nos genera una variable del tipo de dato que almacena sin especificar 
+
+solo podemos usar el mismo tipo de dato luego de haberla definida 
+
+-------------------
+Operadores aritmeticos
+
++
+
+-
+
+*
+
+/
+
+%(resto)
+
+(Los demas no requieren explicacion)
+
+
+public class Nuevo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        
+        int a=11;
+        
+       int b=2;
+       
+       int res=a%b;
+       
+        System.out.println(res);
+    }
+    
+}
+
+Da 1
+
+
+Operaciones en asignacion
+
+
+= 
+
++= suma un siguiente
+
+-=
+
+*=
+
+%=
+
+/=
+
+
+	
+Operadores de comparacion o relacionales
+
+== igual
+!= distinto
+<
+>
+
+>=
+<=
+
+
+Operadores logicos
+
+&& and 
+
+|| or 
+
+! not 
+
+Operadores post incremento y decremento
+
+a++ sube 1 
+b-- baja 1
+
+ambos luego de la ejecucion
+
+
+Operadores pre incremento y decremento
+
+--a;
+++b;
+
+idem a la anterior solo que lo hace antes de que empieze la ejecucion 
+
+-------------------------------------
+
+Entrada de datos desde teclado 
+
+Clase scanner
+
+Cuando generams el codigo siguiente con el scanner y nos va a pedir solo improtar
+de la clase javautil es scanner 
+
+
+   Scanner leer=new Scanner(System.in);
+        System.out.println("Ingrese su nombre:");
+        String nombre=leer.nextLine();
+        System.out.println("Nombre:"+nombre);
+        
+        Scanner leerDos=new Scanner(System.in);
+        System.out.println("Ingrese su edad ");
+        int numero=leerDos.nextInt();
+        System.out.println("Edad:"+numero);
+
+varia el next con el dato que querramos 
+
+ejemplo para ingresar un numero igual pero con el tipo
+
+nextInt();
+nextFloat();
+nextDouble();
+nextBoolean();
+
+
+
+-------------------------
+
+Ejemplo hasta el momento 
+
+Crear un sumador 
+
+import java.util.Scanner;
+public class Nuevo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leerUno = new Scanner(System.in);
+        System.out.println("Ingrese el primer numero:");
+        int num1=leerUno.nextInt();
+        
+        Scanner leerDos = new Scanner(System.in);
+        System.out.println("Ingrese el primer numero:");
+        int num2=leerDos.nextInt();
+        
+        int sum= Sumador(num1,num2);
+        System.out.println("El resultado de la suma es:"+sum);
+        
+       
+        
+    }
+    private static int Sumador(int num1,int num2 ){
+        
+        
+        int resultado=num1+num2;
+        return resultado;   
+    }
+}
+
+
+
+
+
+---------------------------
+
+Estructura secuencial 
+
+ifelse
+
+en este caso vemos primero con seudocodigo como es el flujo de las estructuras para la realizacion 
+
+correspondiente 
+
+Salida en caso del if , caso de falso toma el else pero tener en cuenta que pueden tener subestructuras de control 
+
+Estructura 
+
+
+        if (true) {
+            
+        } else {
+        }
+
+
+Ejemplo
+
+ Scanner leerUno = new Scanner(System.in);
+        System.out.println("Ingrese el primer numero:");
+        int numUno=leerUno.nextInt();
+        
+        Scanner leerDos = new Scanner(System.in);
+        System.out.println("Ingrese el primer numero:");
+        int numDos=leerDos.nextInt();
+        
+    
+        if (numUno>numDos) {
+            
+            System.out.println("El numero uno es mayor");
+            
+        } else {
+            
+            
+            System.out.println("El numero dos es mayor");
+        }
+        
+
+Mostrar ejemplo del mayor y menor del generico y adicionales 
+
+
+-------------------------------
+
+Estructura selectiva caso del switch 
+
+
+
+Nos permite abacar opciones recibiendo valores
+
+switch(){
+
+	case condicion:
+		accion;
+		break;
+	case...
+	default:
+		accion;
+
+}
+
+Ejemplo 
+
+Ver caso de los signos 
+
+        Scanner leerUno = new Scanner(System.in);
+        System.out.println("Ingrese la letra que quiera:");
+        String cadena=leerUno.nextLine();
+        
+        switch(cadena){
+            case "a":
+                System.out.println("Se ingreso una A");
+                break;
+            default:
+                System.out.println("No ingreso una A");
+                  
+                
+        }
+        
+
+
+------------------------
+
+Estructuras repetitivas
+
+while 
+
+vemos como el while nos permite hacer una condicion pero debemos alterar
+la condicion dentro de la ejecucion para evitar el bucle infinito 
+ int contador=0;
+        Scanner leerUno = new Scanner(System.in);
+        System.out.println("Ingrese el primer numero:");
+        int num=leerUno.nextInt();
+        int res= num;
+        
+        
+        while(contador<10){
+            
+            contador++;
+            num=num*contador;
+            System.out.println("Numero es: "+num);
+            num=res;
+
+
+
+
+
+do while se ejecuta primero el corchete y despus la condicion;
+
+Estrtura repetitiva para o for 
+
+atajo fori
+
+Vemos como el 
+
+for (int i; condicion; forma de crecimiento o decrecimiento){
+
+	codigo 
+}
+
+
+Ejemplo 
+
+
+Escribe los numeros del 1 al 10 
+
+        for (int i = 1; i < 11; i++) {
+            System.out.println("El numero es:"+i);
+            
+        }
+
+
+break rompe la ejecucion del bucle 
+
+continue continua la ejecucion desde el principio 
+
+
+---------------------------
+
+El array nos sirve como una lista con indices donde almacenamos una cantidad variada de
+datos que sean del mismo tipo 
+
+
+lista [1:primerElemento;2:SegundoElemento etc]
+
+Definicion
+
+
+Tipo de datos nombre Cantidad de espacio
+
+
+Ejemplo defino Array sin datos
+
+Forma "por fuerza bruta "
+
+        String  nombres [];
+  	nombres = new String[3];
+        nombres[0]="Alex";
+        nombres[1]="Marta";
+        nombres[2]="Maria";
+
+
+Con el mismo indice hacemos la modificacion 
+
+Ejemplo del mismo con la muestra 
+
+    System.out.println(nombres[0]);
+        
+        nombres[0]="Jere";
+        
+        System.out.println(nombres[0]);
+
+
+para contar cuantos datos tiene un array podemos usar el length o el size
+
+  int cantidadUno=nombres.length;
+        
+        System.out.println("Cantiad de elementos"+cantidadUno);
+
+
+para crear de otra forma podemos recurrir a 
+
+  int[] listaUno= {1,2,3,4,5};
+        
+        System.out.println(listaUno[0]);
+      
+O de otra forma pero sin definir los numeros que lleva 
+
+
+      int[] listaDos=new int[5];
+
+
+Iterador con forEach 
+
+Recuperar los datos del Array 
+
+podemos usar while for o for each
+
+definiendo contadores enviado el dato directo del forEach
+
+Ejemplo
+ String  nombres [];
+        
+        nombres = new String[3];
+        nombres[0]="Alex";
+        nombres[1]="Marta";
+        nombres[2]="Maria";
+            
+        System.out.println(nombres[0]);
+        
+        int contador=0;
+        while(contador<nombres.length){
+        
+            System.out.println("Nombre:"+nombres[contador]);
+            contador+=1;
+        
+            
+        
+        }
+        
+        System.out.println("\n");
+        
+        for(String dato:nombres){
+            System.out.println("Nombre:"+dato);
+        }
+
+-------------------------------
+
+Matriz multidimensional
+
+Tiene filas y columnas 
+
+TipoDato nombre [filas][Columna]
+
+
+ejemplo 
+int[][] matriz= new int[2][3];
+       
+       matriz[0][0]=1;
+       matriz[0][1]=2;
+       matriz[0][2]=3;
+        
+       matriz[1][0]=4;
+       matriz[1][1]=5;
+       matriz[1][2]=6;
+       
+     // Caso de iteracion
+     //primero recuperamos matriz interna osea filas
+     
+     for(int[]matrizInterna:matriz){
+         for(int dato:matrizInterna){
+             System.out.println("Elemento es:"+dato);
+         }
+         
+     }
+
+
+
+
+otra forma de definirla es 
+
+	  
+     int[][] x={
+         {1,2,3},
+         {4,5,6}
+     }; 
+
+
+--------------------------
+
+Funciones con retornos parametros y argumentos 
+
+Diferencia entre funcion y metodo
+
+las funciones andan dentro de la misma clase llamando el nombre de la misma 
+
+
+En cambio los metodos debemos instaciar o crear o un objeto de esa clase  y recien ahi 
+invocarlos 
+
+Funcion nos ayuda a reutilzar una parte del codigo 
+
+EL METODO SIEMPRE REQUIERE EL PUBLIC PRIVATE O PROTECTED 
+
+EN CAMBIO LA FUNCION SOLO SI ES STATIC Y SI TIENE O NO RETORNO 	Y SIEMPRE DEBE IR DENTRO DE UNA CLASE 
+
+
+Palabras claves
+
+private
+
+public 
+
+protected
+
+static 
+
+void 
+
+Ejemplo de una funcion 
+
+public class Nuevo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        saludar();
+       
+        
+    }
+     
+    private static int Sumador(int num1,int num2 ){
+        
+        
+        int resultado=num1+num2;
+        return resultado;   
+    }
+    
+    static void saludar(){
+        System.out.println("Hola mundo");
+    }
+}
+
+
+
+Definicion de parametros y argumentos 
+
+parametros son los que le pasamos 
+como a una funcion sum(num1,num2 )
+
+Ejemplo
+
+
+    static void sumar(int a , int b){
+        int suma=a+b;
+        System.out.println("Suma:"+suma);
+    }
+ 
+Los parametros son los que se van a enviar en la ejecucion en el generico 
+
+los arguemtnos son los que se envian en el momento real de la ejecucuion 
+
+
+
+Si es con retorno podemos hacer
+
+ static inr sumar(int a , int b){
+        int suma=a+b;
+        return suma;
+    }
+
+
+------------------------------
+
+Sobrecarga de funciones o sobrecarga de metodos 
+
+Concepto de recursion 
+
+    static void cuentaRegresiva(int numero){
+    
+    numero--;
+    
+        if (numero>0) {
+            System.out.println("Numero:"+numero);
+            cuentaRegresiva(numero);
+            
+        } else {
+            System.out.println("Llego hasta 0");
+        }
+    }
+
+
+VarArgs 
+
+VArios arguemtno o argumentos indefinidos 
+
+      static int sumar(String nombre,int... numeros){
+          System.out.println("La suma de:"+nombre);  
+        int suma=0;
+        for(int num:numeros){
+            suma+=num;
+        }
+        return suma;
+    }
+    
+
+Esta funcion entonces puede recibir cantidad "ilimitada" de numeros que de cualquier forma
+va  a hacer la suma porque considera como una lista a la cantida de valores de entrada que le dejemos 
+
+
+-----------------------
+
+Clase math 
+
+Math.pow(Numero,indice);
+
+devuelve numero elevado al otro
+
+
+Math.random() genera aleatorio entre 0 y uno
+
+Math.random()*n hasta que numero quiere que recorra
+
+Math.random()*(N-M+1)+M M siendo cota superior y N cota inferior 
+
+(int)Math.floor(Math.random()*n) numero pero en int
+
+Math.sqrt(n) raiz cuadrada de n
+
+Math.max(a,b) el mayor entre a y b
+Math.min(a,b) el menor entre a y b
+
+Math.roud(5.8) da un 6 (hace el redondeo del decimal a entero )
+
+
+
+Buscar despues de los genericos muchos ejemplos 
+
+-----------------------
+
+
+Metodos para los string 
+
+charAt(indice) devuelve la letra en ese indice 
+
+Ejemplo
+String nombre="Jeremias";
+        char letra=nombre.charAt(5);
+        System.out.println(letra);
+
+lenght podemos ver la cantidad de caracteres
+
+
+        String nombre="Jeremias"; 
+        int cantidad=nombre.length();
+        System.out.println(cantidad);
+     
+
+substring nos deja una porcion que querramos contando los indices 
+
+
+        String subPorcion=nombre.substring(0,5);
+        System.out.println(subPorcion);
+
+toLowerCase(); Todo a minuscula
+toUpperCase(); Todo a mayuscula
+
+.replace("Que queremos cambiar","Por lo que vamos a cambiar ");
+
+.equals("String") compara nuestro string con la clase string que querramos comparar 
+
+
+StringBuilder Constructor 
+
+Crea un String pero que podemos agregarle tambien mas string 
+
+ StringBuilder nuevo=new StringBuilder();
+        System.out.println(nuevo);
+        
+        nuevo.append("Hola");
+        
+        System.out.println(nuevo); 
+
+
+-----------------------------
+
+Crear aplicaciones 
+
+Primalidad 
+
+Palindromo
+
+Conversor de monedas
+
+Generador de contraseñas 
+
+Adivina el numero 
+
+Java doc (Documentacion de java)
+
+
+Ejecutable jar
+
+
+--------------------
+
+Primero primalidad 
+
+
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Primalidad {
+    
+    public static void main(String[] args){
+        
+        
+        
+        Scanner leer=new Scanner(System.in);
+        System.out.println("Ingrese el numero a evaluar");
+        int numero=leer.nextInt();
+        
+        var condicion=esPrimo(numero);
+        
+        if (condicion){
+            System.out.println("El valor es primo");
+        }
+        else{
+            System.out.println("El valor no es primo");
+        }
+        
+        
+        
+        
+    }
+    
+    static boolean esPrimo(int numero){
+    
+        int contador=0;
+        
+        int[] numeros= new int[numero];
+        
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i]=i+1;
+            
+            
+        }
+        
+        for(int i : numeros ){
+            if(i==1 || i==numero){
+                continue;
+            }
+            if (numero%i ==0){
+                contador++;
+            }
+        }
+        
+        var condicion=true;
+        if (contador==0){
+            condicion=true;
+        }
+        else{
+        
+        condicion= false;}
+        
+        return condicion;
+    }
+}
+
+-------------------------
+
+Palindromo
+
+    static boolean esPalindromo(String cadena ){
+        cadena=cadena.replace("","");
+        cadena=cadena.toLowerCase();
+        StringBuilder invertida= new StringBuilder();
+        
+        for (int i = cadena.length()-1; i >=0 ; i--) {
+            invertida.append(cadena.charAt(i));
+            
+            
+            
+            
+        }
+        return cadena.equals(invertida.toString());
+        
+    }
+
+
+Ejecucion 
+
+       var valor=esPalindromo(pal);
+        
+        if (valor) {
+            System.out.println("Es palindromo");
+        } else {
+            System.out.println("No es palindromo");
+        }
+
+
+--------------------
+
+Contraseña automaticas y conversor de dolar
+
+static StringBuilder generaContrasena(){
+        //Recordar que las lista de char van con comillas simples 
+        char[] mayusculas={'A','B','C','D'};
+        char[] minusculas={'a','b','c','d'};
+        char[] numeros={'1','2','3','4'};
+        
+        StringBuilder caracteres=new StringBuilder();
+        caracteres.append(mayusculas);
+        caracteres.append(minusculas);
+        caracteres.append(numeros);
+        
+        StringBuilder contrasena = new StringBuilder();
+        
+        for (int i = 0; i < 10; i++) {
+            int cantidadCar=caracteres.length();
+            int numeroRandom=(int) Math.floor(Math.random()*(cantidadCar));
+            
+            contrasena.append((caracteres.toString()).charAt(numeroRandom));
+            
+        }
+        
+        
+        
+        return contrasena;
+    }
+    
+    static double Conversor(double num){
+        
+        double valor=num *0.005;
+        
+        valor=Math.round(valor);
+        
+        return valor;
+    }
+
+
+
+
+---------------------
+
+Javadoc
+
+Con el ctrl click sobre una clase podemos ver su documentacion 
+
+para dejar nosotros la documentacion empezamos con /** + Enter 
+
+/**
+     * <h2>Es primo</h2>
+     * @param numero Recibe un numero entero
+     * @return Retorna un valor booleano si es el numero es primo
+     */
+    static boolean esPrimo(int numero){
+    
+        int contador=0;
+        
+        int[] numeros= new int[numero];
+        
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i]=i+1;
+            
+            
+        }
+        
+        for(int i : numeros ){
+            if(i==1 || i==numero){
+                continue;
+            }
+            if (numero%i ==0){
+                contador++;
+            }
+        }
+        
+        var condicion=true;
+        if (contador==0){
+            condicion=true;
+        }
+        else{
+        
+        condicion= false;}
+        
+        return condicion;
+    }
+    
+
+---------------------
+
+Como dejar un jar 
+
+tomo el ejemplo con el de primalidad 
+
+voy a ir a files 
+
+busco al carpeta
+
+Voy a propiertes
+despues marvo todas en compiling 
+
+despues en packking marco para que salga el jar 
+
+y en run selecciono la clase principal
+
+
+Despues pongo sobre la carpeta y selecciono compile and build 
+
+luego de esto busco en netbeansproject la carpeta
+
+y en la carpeta dist la ejecutamos si queremos desde el cmd 
+
+bucamos ruta y lo ejecutamos con
+
+java -jar nombreArchivo.jar 
+
+en mi caso java -jar Primalidad.jar  
+-----------------
+
+Paradigma orientado a objetos 
+
+Componemos de 4 elementos
+
+Clases= Modelo sobre el cual se construye el objeto es su molde,cada objeto corresponde 
+a una clase correspondiente 
+
+Propiedades=Atributos de un objeto
+
+Metodos = Comportamiento de un objeto 
+
+Objeto = Simplemente objeto se deben identificar que propiedades y comportamientos tiene 
+
+Los objetos pueden ser fisicos o conceptuales 
+
+
+
+PILARES 
+
+Encapsulamiento 
+
+Abstraccion:Cada objeto corresponde a una clase que es  su molde debemos abstraer el mismo para hacerlo llegar a este
+
+
+Herencia
+
+Polimorfismo
+
+
+
+
+--------------
+
+Modularidad
+Dividir en disferentes partes/clases el programa
+separar las clases en archuivos/paquetes
+reutilizar bloques de codigo y evitar colapsos 
+
+Reutilizar ,legibilidad,solucion rapida 
+
+
+-----------------
+
+Clases y objetos 
+
+una clase se crea de manera directa con sus metodos
+
+Podemos crear sus atributos de forma sencilla
+
+y los metodos como funciones en los casos anteriores
+
+generariamos algo asi esto seria la declaracion 
+
+public class Persona {
+     String nombre;
+     int edad;
+     
+     void mostrarDatos(){
+         System.out.println("Nombre:"+nombre);
+         System.out.println("Edad:"+edad);
+     }
+}
+
+
+luego de ello podemos INSTANCIAR que seria darle valor en la clase que tenemos nosotros 
+
+	Persona personaUno;
+        
+        personaUno=new Persona();
+        
+        personaUno.nombre="Jere";
+        personaUno.edad=22;
+        
+        personaUno.mostrarDatos();
+        
+        Persona personaDos=new Persona();
+        
+        personaDos.nombre="Joaco";
+        personaDos.edad=22;
+        personaDos.mostrarDatos();
+                
+--------------------------------
+
+
+Paquetes y modificadores  en java 
+
+Si lo tengon en otro package
+
+debo importar con el nombre del package y el nombre de la clase 
+
+en el caso del ejemplo seria 
+
+import clases.Persona 
+
+
+private no nos deja acceder a esa clase desde otros paquetes
+
+despues public nos deja acceder desde las demas clases 
+
+por eso le agregariamos para que pododamos usarlos 
+
+public class Persona {
+    public String nombre;
+    public  int edad;
+     
+     public void mostrarDatos(){
+         System.out.println("Nombre:"+nombre);
+         System.out.println("Edad:"+edad);
+     }
+}
+
+
+Asi nos quedaria 
+
+el valor final nos deja un valor para que quede constatnte
+
+ejemplo 
+
+public class Calculadora {
+    
+    public static final double PI=3.14;
+    
+    public  static int sumar(int a ,int b){
+    
+        return a+b;
+  }
+}
+
+
+-------------------------
+
+Constructores
+
+se ejecutan cunado se crea la clase 
+
+Sobrecarga de constructores se da cuando queremos que la misma accion haga 2 metodos distintos
+
+simplemete es cambiar el nombre y tener en cuenta depende la ubicacion de dejar todo public 
+
+Ejemplo 
+
+public class Persona {
+    public String nombre;
+    public  int edad;
+    
+    public Persona(){
+        System.out.println("Contruyendo el objeto ");
+    }     
+    
+    
+    public  Persona(String nombre){
+        System.out.println("Hola nombre:"+ nombre );
+    }
+     public void mostrarDatos(){
+         System.out.println("Nombre:"+nombre);
+         System.out.println("Edad:"+edad);
+     }
+}
+
+
+------------------------
+
+Instruccion this se aplica para referise al atributo de la clase
+
+Memoria stack asigna un valor literal asi funcuioina con los primitivos
+
+Memoria HEAP nos deja una referencia del valor 
+
+
+public class Rectangulos {
+    
+    public int base;
+    public int altura;
+    
+    public  Rectangulos(){
+        System.out.println("Altura"+altura);
+        System.out.println("Base"+base);
+    }
+    public int area(int altura,int base){
+        // aca tenemos variables locales a b 
+        //variables de la clase base altura 
+        this.base=base;
+        this.altura=altura;
+        return this.base*this.altura;
+    }
+    
+    public int perimetro(int altura, int base){
+        
+        this.base=base;
+        this.altura=altura;
+        
+        return (this.base*2)+(this.altura*2);
+    }
+
+
+}
+
+-----------------------
+
+Encapsulamiento
+
+ocualta el estado de los datos 
+
+los hace mediante metodos 
+
+modificador de acceso tenemos por ejemplo el private que no deja modificar desde otros paquetes 
+
+en eso conciste el encapsulamiento
+
+vemos los getter y los setter 
+
+get retira el valor 
+
+el set nos deja cambiarlo/enviarlo 
+
+En los casos de los boolean tenemos set pero no tenemos get
+debemos usar el is para traerlo 
+
+con el click derecho una vez que ya instaciamos las variables es decir que en la clase
+ya hicimos 
+public class Persona {
+    
+    private String nombre;
+    private int Edad;
+    private boolean eliminado;
+    
+    
+}
+
+
+podemos ver que con el click derecho podemos crear los constructores y los getter y setter
+
+para hcerlo vamos a insert code y luego la opcion que querramos 
+
+los getters son todos los codigos que estan directo en el return para traelo
+
+los setters son lson que nos permiten entrar al mismo para modificarlo
+
+public class Persona {
+    
+    private String nombre;
+    private int edad;
+    private boolean eliminado;
+
+    public Persona(String nombre, int edad, boolean eliminado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.eliminado = eliminado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public boolean isEliminado() {
+        return eliminado;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setEliminado(boolean eliminado) {
+        this.eliminado = eliminado;
+    }
+     
+    
+}
+
+
+vemos en una clase test como funciona la apliacacion de los getter y los setter
+
+
+import encapsulamiento.*;
+/**
+ *
+ * @author Administrador
+ */
+public class TestPersona {
+    public static void main(String[] args){
+    
+     Persona persona1=new Persona("jere",22,true);
+        System.out.println(persona1.getNombre());
+        
+        persona1.setNombre("Jeremias");
+        System.out.println(persona1.getNombre());
+        persona1.setEdad(23);
+        System.out.println(persona1.getEdad());
+   }
+    
+}
+
+
+
+el import encapsulamiento con el.*  nos permite importar todos lo del paquete que nos
+referimos 
+
+
+ejemnplo de sobreescritura de un metodo como en este caso el toString 
+
+package encapsulamiento;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Persona {
+    
+    private String nombre;
+    private int edad;
+    private boolean eliminado;
+
+    public Persona(String nombre, int edad, boolean eliminado) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.eliminado = eliminado;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public boolean isEliminado() {
+        return eliminado;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setEliminado(boolean eliminado) {
+        this.eliminado = eliminado;
+    }
+     
+    @Override
+    public String toString(){
+        return"Persona \n Nombre:%s \n Edad:%d \n Eliminado:%b".formatted(this.nombre,this.edad,this,eliminado);
+    }
+    
+}
+
+
+Ejemplo de ejecucion 
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Test;
+import encapsulamiento.*;
+/**
+ *
+ * @author Administrador
+ */
+public class TestPersona {
+    public static void main(String[] args){
+    
+     Persona persona1=new Persona("jere",22,true);
+        System.out.println(persona1.getNombre());
+        
+        persona1.setNombre("Jeremias");
+        System.out.println(persona1.getNombre());
+        persona1.setEdad(23);
+        System.out.println(persona1.getEdad());
+        
+        String estado=persona1.toString();
+        System.out.println(estado);
+   }
+    
+}
+
+----------------------------
+
+Herencia en java 
+
+Cada clase puede tener muchos atributos o metodos en sus clases de cualqueir forma tambien 
+
+podemos ver que podemos hacer que una clase hereda de otra pro ejemplo un a persona tiene atributos  que comparte con la clase
+empleado y con la clase cliente 
+
+el atributon protected solo deja que entremos en subclases 
+
+esa es la difrecnia con public y private 
+
+El to string tambien lo podemos generar de manera directa con el insert code pero seleccionamos string builder
+
+Queda hasta La clase compelta de persona 
+
+package Herencia;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Persona {
+    
+    protected String nombre;
+    protected char  genero;
+    protected int edad;
+    protected String direccion;
+
+    public Persona(String nombre, char genero, int edad, String direccion) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+        this.direccion = direccion;
+    }
+    
+    public Persona(){
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public char getGenero() {
+        return this.genero;
+    }
+
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public String getDireccion() {
+        return this.direccion;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setGenero(char genero) {
+        this.genero = genero;
+    }
+
+   
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{");
+        sb.append("nombre=").append(this.nombre);
+        sb.append(", genero=").append(this.genero);
+        sb.append(", edad=").append(this.edad);
+        sb.append(", direccion=").append(this.direccion);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+   
+    
+    
+    
+    
+}
+
+
+
+
+Con la expresion extendes vamos a heredadr desde otra clase 
+
+
+public class Empleados extends Persona {
+    
+    //PODEMOS USAR PRIVATE PORQUE HEREDA DE OTRA
+    //PERO NADA VA  HEREDAR DE ELLA 
+    private int idEmpleado;
+    private double sueldo;
+    private static int contadorEmpleado;
+
+    //id emplado lo saco proque lo trabajo internamente 
+    public Empleados(double sueldo, String nombre, char genero, int edad, String direccion) {
+        super(nombre, genero, edad, direccion);
+        this.idEmpleado = ++Empleados.contadorEmpleado;
+        this.sueldo = sueldo;
+    }
+
+    public Empleados(int i, String jere) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public int getIdEmpleado() {
+        return this.idEmpleado;
+    }
+
+    public double getSueldo() {
+        return this.sueldo;
+    }
+
+    public static int getContadorEmpleado() {
+        return contadorEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public static void setContadorEmpleado(int contadorEmpleado) {
+        Empleados.contadorEmpleado = contadorEmpleado;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleados{");
+        sb.append("idEmpleado=").append(this.idEmpleado);
+        sb.append(", sueldo=").append(this.sueldo);
+        sb.append(",").append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    }
+
+    
+    
+
+
+}
+
+
+Clase clientes
+
+package Herencia;
+
+import java.util.Date;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Clientes extends Persona {
+    
+    private int idCliente;
+    private Date fechaRegistro;
+    private boolean vip;
+    private static int contadorCliente;
+
+    public Clientes(Date fechaRegistro, boolean vip, String nombre, char genero, int edad, String direccion) {
+        super(nombre, genero, edad, direccion);
+        this.idCliente=++Clientes.contadorCliente;
+        this.fechaRegistro = fechaRegistro;
+        this.vip = vip;
+    }
+
+    public int getIdCliente() {
+        return this.idCliente;
+    }
+
+    public Date getFechaRegistro() {
+        return this.fechaRegistro;
+    }
+
+    public boolean isVip() {
+        return this.vip;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public void setVip(boolean vip) {
+        this.vip = vip;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Clientes{");
+        sb.append("idCliente=").append(idCliente);
+        sb.append(", fechaRegistro=").append(fechaRegistro);
+        sb.append(", vip=").append(vip);
+        sb.append(",").append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+
+    
+    
+}
+
+
+
+
+Ejecucion
+
+package Test;
+import Herencia.*;
+/**
+ *
+ * @author Administrador
+ */
+public class Herencia {
+    public static void main(String[] args){
+    
+        Empleados empleado=new Empleados(3000,"Jere",'M',22,"Cordoba"); 
+        System.out.println(empleado);
+    }
+}
+
+
+
+----------------
+
+Polimorfismo
+
+Es sobreescribir metodos de las suiperclases o tambien los contructores
+
+metodos static o con final no admiten modificacion 
+
+Esto lo vemos con el toString en la mayoria de los casos que lo usamos 
+
+Vemos que ese es el uso del override tambien 
+como cuando generamos algo en un objeto y luego lo dejamos tmabien acentado en otro
+ejemplo
+
+
+En clase persona
+
+    public String obtenerDetalle(){
+    
+        return "Nombre:%s Edad:%d".formatted(this.nombre,this.edad);
+    }
+
+
+En clase empleados
+
+  @Override
+    public String obtenerDetalle(){
+        return super.obtenerDetalle()+"Es empleado con id:"+this.idEmpleado;
+    }
+
+
+
+-----------------
+
+InstanceOf
+
+Nos sirve para hacer comparaciones sobre las clases a las cuales pertenece
+
+-----------------------
+
+enum 
+
+Cambio el class por el enum
+
+ejemplo
+
+public enum dias {
+    
+    Domingo,
+    lunes,
+    martes,
+    miercoles,
+    jueves,
+    viernes,
+    sabado
+    
+}
+
+
+
+Ejemplo mayor
+
+
+
+public enum Continentes {
+    //Valores de cada elemento
+    AFRICA(54),
+    EUROPA(50),
+    ASIA(48),
+    AMERICA(35),
+    OCEANIA(14);
+    
+    private final int paises;
+    
+    private Continentes (int paises){
+        this.paises=paises;
+    }
+    
+    public int getPaises(){
+        
+        return this.paises;
+    }
+    
+}
+
+
+
+ejecucion
+
+public class TestPaquetes {
+    
+    public static void main(String[] args){
+        // en este caso nos permite hacer el dia 
+        System.out.println(dias.Domingo);
+    
+        System.out.println(Continentes.AMERICA.getPaises());
+        
+        
+    }
+    
+    
+}
+
+
+-----------------------------
+
+Clases abstractas
+
+Con ellas no vamos a poder crear directamente un objeto sino que podemos
+
+dar para que se ejecuten en las subclases 
+
+
+usamos siempre la palabra abstract ante de la class para definirla como tal 
+
+ejemplo con los getter setter y contructores 
+
+package abstractas;
+
+/**
+ *
+ * @author Administrador
+ */
+public abstract class abstracciones {
+    
+    protected String tipoFigura;
+    protected abstracciones(String tipoFigura){
+        this.tipoFigura=tipoFigura;
+        
+    }
+    
+    public abstract void dibujar();
+
+    public String getTipoFigura() {
+        return tipoFigura;
+    }
+
+    public void setTipoFigura(String tipoFigura) {
+        this.tipoFigura = tipoFigura;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("abstracciones{");
+        sb.append("tipoFigura=").append(tipoFigura);
+        sb.append('}');
+        return sb.toString();
+    }
+    
+    
+    
+}
+
+ -----------------
+
+Heredar de clases abstractas 
+
+podemos ver que se va a heredar de las clases menos generica 
+
+
+Vemos como se pueden hacer las llamadas al getClass y getSimpleName
+
+ademas vemos como podemos dejarle metodos que deban hacer las clases hijas
+
+
+Ejemplo
+Definimos cuadrado
+
+
+package abstractas;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Cuadrado extends abstracciones {
+
+    public Cuadrado(String tipoFigura) {
+        super(tipoFigura);
+    }
+
+    @Override
+    public void dibujar() {
+        System.out.println("Se dibuja un:"+this.getClass().getSimpleName());
+
+    }
+    
+    
+    
+}
+
+
+
+Definimos rectangulo
+
+package abstractas;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Rectangulo extends abstracciones {
+
+    public Rectangulo(String tipoFigura) {
+        super(tipoFigura);
+    }
+
+    @Override
+    public void dibujar() {
+        
+        //get class nos sirve para sacar nombre de la clase
+        //get simple name el nombre de la misma 
+        System.out.println("Se dibuja un :"+getClass().getSimpleName());
+    }
+    
+}
+
+
+Ejecucion 
+
+package Testear;
+import abstractas.*;
+/**
+ *
+ * @author Administrador
+ */
+public class Principal {
+    
+   public static void main(String[] args){
+       
+       abstracciones figura= new Rectangulo("Rectangulo");
+       
+       figura.dibujar();
+       
+       abstracciones figuraDos= new Cuadrado("Cuadradito");
+       
+       figuraDos.dibujar();
+       
+   }
+    
+}
+
+
+--------------------------
+
+Interfaz
+
+son similares  a las clases abstractas 
+
+primero no debemos definir desde el package un nueva clase sino una interfaz
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package interfaz;
+
+/**
+ *
+ * @author Administrador
+ */
+public interface baseDatos {
+    
+}
+
+Nos deja algo asi
+
+No se puede crear objetos
+
+ni constructores 
+
+Va mas por el lado de los comportamientos o los atributos 
+
+es buena practica escribir casi todo con mayuscula 	
+
+
+los metodos generados en el interface son abstractos 
+
+con el interface implementamos interface
+
+
+Cuando implementamos debemos usar la palabra implements y luego usar el contructor pra cada uno de los metodos
+si cuando usamos el constructor nos sale por defecto el error 
+
+lo poodemos sacar asi cambiamos la salida 
+
+Ejemplo
+package interfaz;
+
+/**
+ *
+ * @author Administrador
+ */
+public interface baseDatos {
+    
+    //ESTOS SE LLAMAN VARIABLES SON ESTATICOS
+    int MAXIMO_DATOS=10;
+    
+    void insertar();
+    void listar();
+    void actualizar();
+    void eliminar();
+    
+    
+       
+    
+}
+
+
+
+
+Ejecucion
+
+package interfaz;
+
+/**
+ *
+ * @author Administrador
+ */
+public class ImplementarMySQL implements baseDatos {
+
+    @Override
+    public void insertar() {
+        System.out.println("Se inserto un datos");
+    }
+
+    @Override
+    public void listar() {
+
+        System.out.println("Se listo un datos");    }
+
+    @Override
+    public void actualizar() {
+
+        System.out.println("Se actualizo un datos");    }
+
+    @Override
+    public void eliminar() {
+
+        System.out.println("Se borro un datos");    }
+    
+}
+
+--------------------
+
+Clases envolventes 
+
+En las clases solo static no usamos el this 
+
+package Clases;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Personas {
+    private final int idPersona;
+    private static int contadorPersona;
+    
+    static{
+        
+        System.out.println("Ejecucion de un bloque estatico");
+        ++Personas.contadorPersona;
+        
+    }
+    {
+        System.out.println("Bloque de codigo");
+        this.idPersona=Personas.contadorPersona++;
+    }
+
+    public Personas() {
+        System.out.println("Ejecucion del constructor");
+    }
+
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    @Override
+    public String toString() {
+        return "Personas{" + "idPersona=" + idPersona + '}';
+    }
+    
+    
+    
+}
+
+
+Creamos asi el meto estatico y lo implementamos 
+
+package Clases;
+
+/**
+ *
+ * @author Administrador
+ */
+public class test {
+    public static void main(String[] args ){
+    
+        Personas persona = new Personas();
+        System.out.println(persona.toString());
+        
+        Personas personaDos = new Personas();
+        System.out.println(personaDos.toString());
+    }
+}
+
+
+lo implemente dentro del mismo paquete por lo cual no hacia falta el importar , de esta manera podemos ver 
+
+como se ejecuta solo una vez el bloque estatico 
+
+Clases envolventes con tipos de datos primitivos 
+
+Escribir con mayucula en Integer por ejemplo nos lo deja como un objeto esto nos marca la diferencia 
+
+de como dejariams el numeor con todas las posibilidades de objeto 
+
+---------------------
+
+Errores y excepciones 
+
+Errores en tiempo de compilacion y en tiempo de ejecucion
+
+Tiempo de compilacion es antes de ejecutar el programa 
+
+En tiempo de ejecucion en luego del compilado y el F6 del mismo
+
+Comunes:
+-Sintaxis
+-Asignaciones
+-Reglas 
+
+
+Excepcion 
+indica que un problema se dio durante la ejecucion de un programa 
+la misma nos indica donde se genero este ultimo 
+
+Dentro del try va lo que puede llegar a tener la excepcion 
+
+una vez que lo hacemos tocamos en el format con el click derecho 
+
+Luego una vez que encontramos la excecion vemos que queremos que haga el catch
+
+asi como tambien dejamos que cual es el error que nos muestra en ejecucion 
+
+en este caso vemos que siendo int ponemos un numero con coma por lo mismo nos da el 
+error inputMisMatch 
+
+Ejemplo
+
+package personal;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Excepciones {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        try {
+
+            var leer = new Scanner(System.in);
+            System.out.println("Ingrese el primer numero:");
+            int n1 = leer.nextInt();
+
+            var leerDos = new Scanner(System.in);
+            System.out.println("Ingrese el segundo numero:");
+            int n2 = leerDos.nextInt();
+
+            int resultado = n1 / n2;
+
+            System.out.println("El resultado es:\n%d".formatted(resultado));
+        } catch (InputMismatchException e) {
+            System.out.println("Ingreso un numero con coma");
+            e.printStackTrace(System.out);
+        }
+    }
+
+}
+
+
+---------------------
+
+Jerarquia de las excepciones 
+
+Throwable Es la principal 
+
+despeus  familia de error
+
+y familia de exception con subclases runtimeexception que lo manejamos nostoros
+y IOexception que lo maneja poco mas el sistema 
+
+Podemos encadenar los exception con los catch 
+
+
+el finaly nos deja algo acentado de todas formas se vea o no el error 
+
+y el printStackTrace evita que se escriba del codigo necesario
+
+Si quermeos una excepcion en el catch por las dudas algo extra ocurriera podemos dejar
+
+Catch(Exception e){Bloque de cofigo }
+
+----------------
+
+
+Crear excepciones verificadas
+
+Heredar de exception
+
+package personal;
+
+/**
+ *
+ * @author Administrador
+ */
+public class OperadorExcepcion extends Exception {
+    public OperadorExcepcion(String mensaje){
+    
+            super(mensaje);
+    }
+    
+    
+    
+}
+
+
+ejecucion en el caso de heredar de excpcion
+
+package personal;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Excepciones {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        boolean condicion=true;
+        
+        do {       
+            
+               try {
+
+            var leer = new Scanner(System.in);
+            System.out.println("Ingrese el primer numero:");
+            int n1 = leer.nextInt();
+
+            var leerDos = new Scanner(System.in);
+            System.out.println("Ingrese el segundo numero:");
+            int n2 = leerDos.nextInt();
+
+            int resultado=dividir(n1,n2);
+
+            System.out.println("El resultado es:\n%d".formatted(resultado));
+            
+            condicion=false;
+               } catch (InputMismatchException e) {
+            System.out.println("Ingreso un numero con coma");
+            e.printStackTrace(System.out);
+        }catch(OperadorExcepcion e){
+            //el getMessage nos deja ver el mesnaje que se devolveria en ese caso 
+            System.err.println("Error"+e.getMessage());
+                }
+        catch(Exception e){
+            e.printStackTrace(System.out);
+        }finally{
+            System.out.println("Se reviso la division");
+        }
+            
+            
+        } while (condicion);
+
+     
+      
+    }
+    
+    static int dividir(int n, int d) throws OperadorExcepcion{
+        //throw nos deja mandar la excepcion
+        if (d==0){
+            throw new OperadorExcepcion("Dividir entre cero");
+            
+            }
+        return n/d;
+    }
+
+}
+
+
+Heredar de RuntimeException
+no necesitamos la utlioma aclaracion del throwable 
+
+Funcion
+
+package personal;
+
+/**
+ *
+ * @author Administrador
+ */
+public class OperadorExcepcion extends RuntimeException {
+    public OperadorExcepcion(String mensaje){
+    
+            super(mensaje);
+    }
+    
+    
+    
+}
+
+
+Ejecucion
+
+package personal;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Excepciones {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        boolean condicion=true;
+        
+        do {       
+            
+               try {
+
+            var leer = new Scanner(System.in);
+            System.out.println("Ingrese el primer numero:");
+            int n1 = leer.nextInt();
+
+            var leerDos = new Scanner(System.in);
+            System.out.println("Ingrese el segundo numero:");
+            int n2 = leerDos.nextInt();
+
+            int resultado=dividir(n1,n2);
+
+            System.out.println("El resultado es:\n%d".formatted(resultado));
+            
+            condicion=false;
+               } catch (InputMismatchException e) {
+            System.out.println("Ingreso un numero con coma");
+            e.printStackTrace(System.out);
+        }catch(OperadorExcepcion e){
+            //el getMessage nos deja ver el mesnaje que se devolveria en ese caso 
+            System.err.println("Error"+e.getMessage());
+                }
+        catch(Exception e){
+            e.printStackTrace(System.out);
+        }finally{
+            System.out.println("Se reviso la division");
+        }
+            
+            
+        } while (condicion);
+
+     
+      
+    }
+    
+    static int dividir(int n, int d) {
+        //throw nos deja mandar la excepcion
+        if (d==0){
+            throw new OperadorExcepcion("Dividir entre cero");
+            
+            }
+        return n/d;
+    }
+
+}
+
+----------------
+Array List 
+
+Clase que nos sirve para generar una lista con el tipo de datos especidgicado
+
+pero no con la cantiad de elemetnos especificada 
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Administrador
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //asi hacemos un array con cantidad de datos a almacenar indefinidos 
+        ArrayList<String> meses= new ArrayList<>();
+        
+        meses.add("Enero");
+        meses.add("Febrero");
+        meses.add("Marzo");
+        System.out.println(meses);
+        
+        for(String dato:meses){
+        
+            System.out.println(dato);
+        }
+    }
+    
+}
+
+
+
+----------------
+
+Cuadro de dialogo
+Ejemplo de un cuadro de dialogo con sus aclaraciones para interactuar
+
+import javax.swing.JOptionPane;
+
+
+/**
+ *
+ * @author Administrador
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+       String valor= JOptionPane.showInputDialog(null,
+                "Ingrese texto",
+                "Entrada",
+		//Aca decimos el tipo de salida
+                3);
+        
+        JOptionPane.showMessageDialog(null,
+                //Contenido 
+                valor,
+                //Titulo
+                "Titulo",
+                //Valor del icono
+                JOptionPane.QUESTION_MESSAGE
+        );
+    }
+    
+}
+
+
+-------------
+
+Crear un interface
+
+
+
+-------------
+
+
+Aplicacion de juegos 
+
+
+
